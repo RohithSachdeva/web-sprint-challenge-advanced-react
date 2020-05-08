@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm } from "../hooks/useForm"
 
 const initialValue = {
   firstName: "",
@@ -13,13 +14,19 @@ const initialValue = {
 // Build out the logic needed for a form custom hook (see the useForm.js file)
 // and replace the necessary stateful logic from CheckoutForm with the hook
 
+//Delete set state... remove handleChanges (setup in custom hook), modify handlesubmit? 
+//[values, handleChanges, clearForm] = useForm(....?) initialValue in the clearForm
+
+//No clear button/functionality in the program;  not neccessary or referral back to it in CheckoutForm
+//Localstorage set up for form inputs, not plant selections.  
+
 const CheckoutForm = (props) => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [values, setValues] = useState(initialValue);
-
-  const handleChanges = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
+  
+  const [values, handleChanges, clearForm] = useForm(
+    "checkoutForm",
+    initialValue
+  ); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
