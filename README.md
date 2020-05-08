@@ -30,13 +30,28 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+-A stateful class component will hold data.  You can use the constructor function as a blueprint and use super() to pass props down to the children.  After that, you want to define the state and the structure in which your data will be received.  This will all be within the class component.     
+
+
 2. Describe the different phases of the component lifecycle.
+
+-Mounting - The component is being built.  The initial data wanted is defined on the constructor of this phase. 
+-Update - The growth/updating of your component data.
+-Unmount - This removes the component from the screen
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+-There are a handful of methods that are used in the phases of the component lifecycle.  In the mounting phase, you will typically use a constructor() to setup stateful data and componentDidMount() to run statements after rendering.  The update phase revolves around when there is a change in the state or props of the component.  When it comes to the mounting and update phase of the cycle, render() is the only required method.  Lastly, the unmount phase is for removing components from the DOM.  This utilitizes the componentWillUnmount() method.  
+
 4. Define stateful logic.
 
+-With React Hooks you can reuse logic amongst React Components.  Stateful logic is basically any code that utilizes state and with certain methods you can share that state across different components.  
+
+
 5. Describe how to test a React component with React Testing Library.
+
+-You want to follow the framework of AAA; arrange, act, and assert.  Arrange the code so that it can be tested.  Act upon it by calling a method or function that returns a result we want to test.  Then you assert whether that expected return matched the actual return.  
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
